@@ -44,6 +44,7 @@ namespace ImgApp_2_WinForms
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -57,7 +58,7 @@ namespace ImgApp_2_WinForms
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(824, 626);
+            this.pictureBox1.Size = new System.Drawing.Size(817, 626);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -76,7 +77,7 @@ namespace ImgApp_2_WinForms
             // 
             // bSave
             // 
-            this.bSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.bSave.Location = new System.Drawing.Point(902, 615);
             this.bSave.Name = "bSave";
             this.bSave.Size = new System.Drawing.Size(123, 23);
@@ -88,7 +89,7 @@ namespace ImgApp_2_WinForms
             // 
             // bDraw
             // 
-            this.bDraw.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bDraw.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.bDraw.Location = new System.Drawing.Point(902, 560);
             this.bDraw.Name = "bDraw";
             this.bDraw.Size = new System.Drawing.Size(123, 23);
@@ -173,9 +174,7 @@ namespace ImgApp_2_WinForms
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox3.Location = new System.Drawing.Point(858, 12);
             this.pictureBox3.Name = "pictureBox3";
@@ -188,9 +187,7 @@ namespace ImgApp_2_WinForms
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox2.Location = new System.Drawing.Point(858, 150);
             this.pictureBox2.Name = "pictureBox2";
@@ -203,6 +200,7 @@ namespace ImgApp_2_WinForms
             // 
             // button1
             // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.Location = new System.Drawing.Point(902, 521);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(122, 23);
@@ -241,6 +239,7 @@ namespace ImgApp_2_WinForms
             // 
             // linkLabel1
             // 
+            this.linkLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(100)))));
             this.linkLabel1.Location = new System.Drawing.Point(12, 650);
@@ -251,11 +250,24 @@ namespace ImgApp_2_WinForms
             this.linkLabel1.Text = "github.com";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.Location = new System.Drawing.Point(835, 259);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(59, 21);
+            this.button2.TabIndex = 15;
+            this.button2.Text = "Удалить";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Visible = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1037, 683);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.bOpentwo);
             this.Controls.Add(this.label3);
@@ -298,6 +310,7 @@ namespace ImgApp_2_WinForms
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Button button2;
     }
 }
 

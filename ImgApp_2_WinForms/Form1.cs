@@ -60,7 +60,7 @@ namespace ImgApp_2_WinForms
                 {
                     bOpenone.Text = "Изменить 1";
                     pictureBox3.Visible = true;
-                    bOpenone.Location = new System.Drawing.Point(900, 121);
+                    bOpenone.Location = new System.Drawing.Point(bOpenone.Location.X, bOpenone.Location.Y + 109);
                     bOpentwo.Visible = true;
                     label2.Visible = true;
                     comboBox2.Visible = true;
@@ -677,10 +677,11 @@ namespace ImgApp_2_WinForms
                 {
                     bOpentwo.Text = "Изменить 2";
                     pictureBox2.Visible = true;
-                    bOpentwo.Location = new System.Drawing.Point(900, 259);
+                    bOpentwo.Location = new System.Drawing.Point(bOpentwo.Location.X, bOpentwo.Location.Y + 109);
                     label1.Visible = true;
                     comboBox1.Visible = true;
                     button1.Visible = true;
+                    button2.Visible = true;
                     
                 }
                 
@@ -715,6 +716,18 @@ namespace ImgApp_2_WinForms
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             System.Diagnostics.Process.Start("https://github.com/merkulov-1230/Picture_edit_lab1");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            image2.Dispose();
+            bOpentwo.Text = "Открыть 2 картинку";
+            pictureBox2.Visible = false;
+            bOpentwo.Location = new System.Drawing.Point(bOpentwo.Location.X, bOpentwo.Location.Y - 109);
+            label1.Visible = false;
+            comboBox1.Visible = false;
+            button1.Visible = false;
+            button2.Visible = false;
         }
     }
 }
